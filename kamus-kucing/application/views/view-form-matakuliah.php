@@ -8,6 +8,12 @@
   </head>
   <body>
     <div class="container mt-5">
+      <?php if(validation_errors()){ ?>
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+          <?= validation_errors(); ?>
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      <?php } ?>
     	<div class="card shadow">
   			<div class="card-body">
 		    	<h5>Form Mata Kuliah!</h5>
